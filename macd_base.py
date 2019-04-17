@@ -192,10 +192,10 @@ class MACD_INDEX:
         cnt = stock_code.shape[0]
         print('开始计算,总数 ' + str(cnt) + ' 只')
         for x in range(cnt):
-            pre2 = '剩余 ' + str(cnt - x - 1) + ' 只，完成 {:.2f}%'.format(
+            pre2 = ', 剩余 ' + str(cnt - x - 1) + ' 只，完成 {:.2f}%'.format(
                 (x + 1) * 100 / cnt) + ' 选出 ' + str(line) + ' 只'
             print('\r', pre, pre2.ljust(10), end='')
-            self.signal.sendmsg(pre+'总数 ' + str(cnt) + ' 只'+pre2)
+            self.signal.sendmsg(pre+', 总数 ' + str(cnt) + ' 只'+pre2)
             try:
                 df = self.get_index(stock_code.iloc[x]['stock_code'])
             except MACD_Error:
@@ -249,11 +249,10 @@ class MACD_INDEX:
         cnt = stock_code.shape[0]
         print('开始计算,总数 ' + str(cnt) + ' 只')
         for x in range(cnt):
-
-            pre2 = '剩余 ' + str(cnt - x - 1) + ' 只，完成 {:.2f}%'.format(
+            pre2 = ', 剩余 ' + str(cnt - x - 1) + ' 只，完成 {:.2f}%'.format(
                 (x + 1) * 100 / cnt) + ' 选出 ' + str(line) + ' 只'
             print('\r', pre, pre2.ljust(10), end='')
-            self.signal.sendmsg(pre+'总数 ' + str(cnt) + ' 只'+pre2)
+            self.signal.sendmsg(pre+', 总数 ' + str(cnt) + ' 只'+pre2)
             try:
                 df = self.get_index(stock_code.iloc[x]['stock_code'])
             except MACD_Error:
@@ -275,7 +274,7 @@ class MACD_INDEX:
         print('\n\t\t', '完成！请打开：', self.save_name, '\n')
         df_rst.to_csv(self.save_name, index=False, header=True,encoding='utf_8_sig')
 
-    def save_day_golden(self, market='all', isprt=False):
+    def save_golden_now(self, market='all', isprt=False):
         df_rst = pd.DataFrame(
             columns=(
                 '类别',
@@ -289,26 +288,25 @@ class MACD_INDEX:
         except sb.stkBaseError:
             return
         if self.jb == 'm':
-            pre = '月K线(即将)金叉'
+            pre = '月K线(刚刚)金叉'
         if self.jb == 'd':
-            pre = '日K线(即将)金叉'
+            pre = '日K线(刚刚)金叉'
         if self.jb == 'w':
-            pre = '周K线(即将)金叉'
+            pre = '周K线(刚刚)金叉'
         if self.jb == '60':
-            pre = '60分钟K线(即将)金叉'
+            pre = '60分钟K线(刚刚)金叉'
         if self.jb == '15':
-            pre = '15分钟K线(即将)金叉'
+            pre = '15分钟K线(刚刚)金叉'
 
         self.save_name = 'D:\\0_stock_macd\\' + '_' + pre + '.csv'
         line = 0
         cnt = stock_code.shape[0]
         print('开始计算,总数 ' + str(cnt) + ' 只')
         for x in range(cnt):
-
-            pre2 = '剩余 ' + str(cnt - x - 1) + ' 只，完成 {:.2f}%'.format(
+            pre2 = ', 剩余 ' + str(cnt - x - 1) + ' 只，完成 {:.2f}%'.format(
                 (x + 1) * 100 / cnt) + ' 选出 ' + str(line) + ' 只'
             print('\r', pre, pre2.ljust(10), end='')
-            self.signal.sendmsg(pre+'总数 ' + str(cnt) + ' 只'+pre2)
+            self.signal.sendmsg(pre+', 总数 ' + str(cnt) + ' 只'+pre2)
             try:
                 df = self.get_index(stock_code.iloc[x]['stock_code'])
             except MACD_Error:
@@ -320,7 +318,7 @@ class MACD_INDEX:
                 continue
 
             try:
-                df3 = ab.analyze_bing_golden(df2, isprt)
+                df3 = ab.analyze_golden_now(df2, isprt)
             except ab.AnalyzeError:
                 pass
             else:
@@ -371,11 +369,10 @@ class MACD_INDEX:
         cnt = stock_code.shape[0]
         print('开始计算,总数 ' + str(cnt) + ' 只')
         for x in range(cnt):
-
-            pre2 = '剩余 ' + str(cnt - x - 1) + ' 只，完成 {:.2f}%'.format(
+            pre2 = ', 剩余 ' + str(cnt - x - 1) + ' 只，完成 {:.2f}%'.format(
                 (x + 1) * 100 / cnt) + ' 选出 ' + str(line) + ' 只'
             print('\r', pre, pre2.ljust(10), end='')
-            self.signal.sendmsg(pre+'总数 ' + str(cnt) + ' 只'+pre2)
+            self.signal.sendmsg(pre+', 总数 ' + str(cnt) + ' 只'+pre2)
             try:
                 df = self.get_index(stock_code.iloc[x]['stock_code'])
             except MACD_Error:
@@ -425,10 +422,10 @@ class MACD_INDEX:
         print('开始计算,总数 ' + str(cnt) + ' 只')
         for x in range(cnt):
 
-            pre2 = '剩余 ' + str(cnt - x - 1) + ' 只，完成 {:.2f}%'.format(
+            pre2 = ', 剩余 ' + str(cnt - x - 1) + ' 只，完成 {:.2f}%'.format(
                 (x + 1) * 100 / cnt) + ' 选出 ' + str(line) + ' 只'
             print('\r', pre, pre2.ljust(10), end='')
-            self.signal.sendmsg(pre+'总数 ' + str(cnt) + ' 只'+pre2)
+            self.signal.sendmsg(pre+', 总数 ' + str(cnt) + ' 只'+pre2)
             try:
                 df = self.get_index(stock_code.iloc[x]['stock_code'])
             except MACD_Error:

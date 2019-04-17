@@ -122,6 +122,17 @@ def analyze_golden_red(macd, isprt=False):
     else:
         return rst
 
+def analyze_golden_now(macd, isprt=False):
+    '''刚刚金叉，红柱出现1--2根'''
+    try:
+        rst = analyze_golden(macd, isprt)
+    except AnalyzeError:
+        raise AnalyzeError(get_code() + '，不是金叉！')
+    # 3根红柱以上，判断最后3根越来越长
+    if rst[4] < 3:
+        return rst
+    else:
+        raise AnalyzeError(get_code() + '，金叉后红柱没有持续变长！')
 
 def analyze_golden(macd, isprt=False):
     ''' macd最后一次交叉是金叉才有返回值，否则返回空列表，

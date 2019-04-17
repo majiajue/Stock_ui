@@ -6,9 +6,15 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>686</width>
-    <height>444</height>
+    <width>645</width>
+    <height>542</height>
    </rect>
+  </property>
+  <property name="font">
+   <font>
+    <family>微软雅黑</family>
+    <pointsize>12</pointsize>
+   </font>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
@@ -17,10 +23,10 @@
    <widget class="QGroupBox" name="groupBox_3">
     <property name="geometry">
      <rect>
-      <x>0</x>
-      <y>210</y>
-      <width>391</width>
-      <height>61</height>
+      <x>10</x>
+      <y>320</y>
+      <width>381</width>
+      <height>91</height>
      </rect>
     </property>
     <property name="font">
@@ -50,7 +56,7 @@
     <widget class="QRadioButton" name="radioButton_9">
      <property name="geometry">
       <rect>
-       <x>100</x>
+       <x>140</x>
        <y>30</y>
        <width>91</width>
        <height>18</height>
@@ -63,22 +69,9 @@
     <widget class="QRadioButton" name="radioButton_10">
      <property name="geometry">
       <rect>
-       <x>200</x>
+       <x>270</x>
        <y>30</y>
-       <width>71</width>
-       <height>18</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>底背离</string>
-     </property>
-    </widget>
-    <widget class="QRadioButton" name="radioButton_11">
-     <property name="geometry">
-      <rect>
-       <x>280</x>
-       <y>30</y>
-       <width>101</width>
+       <width>111</width>
        <height>18</height>
       </rect>
      </property>
@@ -86,14 +79,27 @@
       <string>即将底背离</string>
      </property>
     </widget>
+    <widget class="QRadioButton" name="radioButton_11">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>60</y>
+       <width>91</width>
+       <height>18</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>刚刚金叉</string>
+     </property>
+    </widget>
    </widget>
    <widget class="QGroupBox" name="groupBox_4">
     <property name="geometry">
      <rect>
       <x>410</x>
-      <y>0</y>
+      <y>20</y>
       <width>221</width>
-      <height>271</height>
+      <height>391</height>
      </rect>
     </property>
     <property name="font">
@@ -111,7 +117,7 @@
        <x>0</x>
        <y>20</y>
        <width>221</width>
-       <height>251</height>
+       <height>371</height>
       </rect>
      </property>
     </widget>
@@ -119,9 +125,9 @@
    <widget class="QGroupBox" name="groupBox_2">
     <property name="geometry">
      <rect>
-      <x>0</x>
-      <y>130</y>
-      <width>391</width>
+      <x>10</x>
+      <y>210</y>
+      <width>381</width>
       <height>61</height>
      </rect>
     </property>
@@ -166,9 +172,9 @@
    <widget class="QWidget" name="horizontalLayoutWidget">
     <property name="geometry">
      <rect>
-      <x>0</x>
-      <y>0</y>
-      <width>391</width>
+      <x>10</x>
+      <y>30</y>
+      <width>381</width>
       <height>41</height>
      </rect>
     </property>
@@ -204,8 +210,8 @@
    <widget class="QGroupBox" name="groupBox">
     <property name="geometry">
      <rect>
-      <x>0</x>
-      <y>50</y>
+      <x>10</x>
+      <y>110</y>
       <width>271</width>
       <height>61</height>
      </rect>
@@ -261,13 +267,35 @@
      </property>
     </widget>
    </widget>
+   <widget class="QWidget" name="verticalLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>460</y>
+      <width>611</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <item>
+      <widget class="QLabel" name="label">
+       <property name="text">
+        <string/>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>686</width>
+     <width>645</width>
      <height>23</height>
     </rect>
    </property>
