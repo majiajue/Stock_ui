@@ -74,10 +74,10 @@ class Slt_Stock(QtWidgets.QMainWindow, sl.Ui_MainWindow):
         macd_d.signal.send.connect(self.macd_progress)
         self.thread = MACD_Calc()
         self.thread.set_macd_m(macd_m.save_golden, 'all')
-        self.thread.set_macd_w(  macd_w.save_golden,
-            'D:\\0_stock_macd\\_月K线金叉.csv')
-        self.thread.set_macd_d(  macd_d.save_golden,
-            'D:\\0_stock_macd\\_周K线金叉.csv')
+        self.thread.set_macd_w(macd_w.save_golden,
+                               'D:\\0_stock_macd\\_月K线金叉.csv')
+        self.thread.set_macd_d(macd_d.save_golden,
+                               'D:\\0_stock_macd\\_周K线金叉.csv')
         self.thread.start()
 
     def init_wd(self):
@@ -92,8 +92,8 @@ class Slt_Stock(QtWidgets.QMainWindow, sl.Ui_MainWindow):
         self.thread.set_macd_w(
             macd_w.save_golden, 'all')
 
-        self.thread.set_macd_d( macd_d.save_golden,
-            'D:\\0_stock_macd\\_周K线金叉.csv')
+        self.thread.set_macd_d(macd_d.save_golden,
+                               'D:\\0_stock_macd\\_周K线金叉.csv')
         self.thread.start()
 
     def init_d(self):
