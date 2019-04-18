@@ -10,8 +10,10 @@ import stock_base as stb
 class MACD_Calc(QThread):
     macd_m = None
     para_m = ''
+
     macd_w = None
     para_w = ''
+
     macd_d = None
     para_d = ''
 
@@ -36,15 +38,15 @@ class MACD_Calc(QThread):
     def run(self):
         print(self.macd_m)
         if self.macd_m is not None:
-            self.macd_m(self.para_m)
+            self.macd_m.save_golden(self.para_m)
             self.macd_m.disconnect()
 
         if self.macd_w is not None:
-            self.macd_w(self.para_w)
+            self.macd_w.save_golden(self.para_w)
             self.macd_w.disconnect()
 
         if self.macd_d is not None:
-            self.macd_d(self.para_d)
+            self.macd_d.save_golden(self.para_d)
             self.macd_d.disconnect()
 
 
@@ -72,11 +74,12 @@ class Slt_Stock(QtWidgets.QMainWindow, sl.Ui_MainWindow):
 
         macd_d = mb.MACD_INDEX('d')
         macd_d.signal.send.connect(self.macd_progress)
+
         self.thread = MACD_Calc()
-        self.thread.set_macd_m(macd_m.save_golden, 'all')
-        self.thread.set_macd_w(macd_w.save_golden,
+        self.thread.set_macd_m(macd_m, 'all')
+        self.thread.set_macd_w(macd_w,
                                'D:\\0_stock_macd\\_月K线金叉.csv')
-        self.thread.set_macd_d(macd_d.save_golden,
+        self.thread.set_macd_d(macd_d,
                                'D:\\0_stock_macd\\_周K线金叉.csv')
         self.thread.start()
 
@@ -89,10 +92,9 @@ class Slt_Stock(QtWidgets.QMainWindow, sl.Ui_MainWindow):
         macd_d.signal.send.connect(self.macd_progress)
 
         self.thread = MACD_Calc()
-        self.thread.set_macd_w(
-            macd_w.save_golden, 'all')
+        self.thread.set_macd_w(macd_w, 'all')
 
-        self.thread.set_macd_d(macd_d.save_golden,
+        self.thread.set_macd_d(macd_d,
                                'D:\\0_stock_macd\\_周K线金叉.csv')
         self.thread.start()
 
@@ -103,7 +105,7 @@ class Slt_Stock(QtWidgets.QMainWindow, sl.Ui_MainWindow):
         macd_d.signal.send.connect(self.macd_progress)
 
         self.thread = MACD_Calc()
-        self.thread.set_macd_d(macd_d.save_golden, 'all')
+        self.thread.set_macd_d(macd_d, 'all')
         self.thread.start()
 
     def set_init_conditions(self):
