@@ -2,12 +2,11 @@
 
 # Form implementation generated from reading ui file 'SelectStock.ui'
 #
-# Created by: PyQt5 UI code generator 5.12.1
+# Created by: PyQt5 UI code generator 5.11.3
 #
 # WARNING! All changes made in this file will be lost!
 
 from PyQt5 import QtCore, QtGui, QtWidgets
-
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -63,7 +62,7 @@ class Ui_MainWindow(object):
         self.radioButton_6.setGeometry(QtCore.QRect(20, 30, 121, 18))
         self.radioButton_6.setObjectName("radioButton_6")
         self.radioButton_7 = QtWidgets.QRadioButton(self.groupBox_2)
-        self.radioButton_7.setGeometry(QtCore.QRect(160, 30, 131, 18))
+        self.radioButton_7.setGeometry(QtCore.QRect(180, 30, 131, 18))
         self.radioButton_7.setObjectName("radioButton_7")
         self.horizontalLayoutWidget = QtWidgets.QWidget(self.centralwidget)
         self.horizontalLayoutWidget.setGeometry(QtCore.QRect(10, 30, 381, 41))
@@ -168,8 +167,6 @@ class Ui_MainWindow(object):
         self.pushButton_4.setText(_translate("MainWindow", "开始选股"))
 
 
-
-
 if __name__ == "__main__":
     import sys
     app = QtWidgets.QApplication(sys.argv)
@@ -178,3 +175,4 @@ if __name__ == "__main__":
     ui.setupUi(MainWindow)
     MainWindow.show()
     sys.exit(app.exec_())
+
