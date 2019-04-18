@@ -155,14 +155,16 @@ class Slt_Stock(QtWidgets.QMainWindow, sl.Ui_MainWindow):
         macd_jb.disconnect()
 
         self.label.setText('  ')
-        stock_code = stb.get_stock_code(macd_jb.save_name)
+        stock_code = stb.get_stock_code('D:\\0_stock_macd\\_日K线金叉.csv')
         cnt = stock_code.shape[0]
         self.statusbar.showMessage('计算完成, 共选出 ' + str(cnt) + ' 只')
-
+        print('xxx'*9)
         all_stock = stb.get_market_code('all')
-
+        print('yyy' * 9)
+        print( all_stock.shape[0] )
         for x in range(cnt):
             code = stock_code.iloc[x]['stock_code']
+            print('zzz' * 9)
             for i in range(1, all_stock.shape[0]):
                 if all_stock.iloc[i]['stock_code'].find(code[3:]) > 0:
                     rst = '{: <4d}'.format(x + 1) + code

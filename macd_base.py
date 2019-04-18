@@ -51,6 +51,13 @@ class MACD_INDEX:
 
         print('k线级别:', self.jb, '\t开始时间:', self.begin, '\t结束时间:', self.end)
 
+    def disconnect( self ):
+        lg = bs.logout()
+        if int(lg.error_code) == 0:
+            self.status = '退出成功'
+        else:
+            self.status = '退出失败'
+
     def set_time(self, begin='2019', end='2019'):
         '''重新设置开始时间和结束时间'''
         if begin != '2019':
@@ -217,7 +224,7 @@ class MACD_INDEX:
                 df_rst.loc[line] = df3
 
         print('\n\t\t', '完成！请打开：', self.save_name, '\n')
-        df_rst.to_csv(self.save_name, index=False, header=True,encoding='utf_8_sig')
+        df_rst.to_csv(self.save_name, index=False, header=True,encoding='utf-8')
 
     def save_bing_golden(self, market='all'):
         """周线选股时，日线即将金叉，或者已经金叉的日线级别增强判断"""
@@ -272,7 +279,7 @@ class MACD_INDEX:
                 df_rst.loc[line] = df3
 
         print('\n\t\t', '完成！请打开：', self.save_name, '\n')
-        df_rst.to_csv(self.save_name, index=False, header=True,encoding='utf_8_sig')
+        df_rst.to_csv(self.save_name, index=False, header=True,encoding='utf-8')
 
     def save_golden_now(self, market='all', isprt=False):
         df_rst = pd.DataFrame(
@@ -335,7 +342,7 @@ class MACD_INDEX:
                 df_rst.loc[line] = df3
 
         print('\n \t\t', '完成！\n')
-        df_rst.to_csv(self.save_name, index=False, header=True,encoding='utf_8_sig')
+        df_rst.to_csv(self.save_name, index=False, header=True,encoding='utf-8')
 
     def save_bottom(self, market='all', isprt=False):
         '''保存底背离股票代码'''
@@ -391,7 +398,7 @@ class MACD_INDEX:
                 df_rst.loc[line] = dbl_rst
 
         print('\n \t\t', '完成！\n')
-        df_rst.to_csv(self.save_name, index=False, header=True,encoding='utf_8_sig')
+        df_rst.to_csv(self.save_name, index=False, header=True,encoding='utf-8')
 
     def save_top(self, market='all', isprt=False):
         df_rst = pd.DataFrame(
@@ -440,7 +447,7 @@ class MACD_INDEX:
 
 if __name__ == "__main__":
     macd_60 = MACD_INDEX('60')
-    macd_60.save_golden('all')
+    macd_60.save_golden('D:\\0_stock_macd\\_日K线金叉.csv')
 
     # macd_15 = MACD_INDEX('15')
     # macd_15.save_golden('D:\\0_stock_macd\\_60分钟K线金叉.csv')

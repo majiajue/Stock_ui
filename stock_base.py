@@ -83,7 +83,7 @@ def set_market_code():
         code.append(data.iloc[i]['name'])
         codes.loc[i] = code
         code.clear()
-    codes.to_csv('股票代码.csv', index=False, header=True,encoding='utf_8_sig')
+    codes.to_csv('股票代码.csv', index=False, header=True,encoding='utf_8')
 
 
 def get_market_code(market):
@@ -96,7 +96,7 @@ def get_market_code(market):
         return None
 
     try:
-        df = pd.read_csv('股票代码.csv',encoding='utf_8_sig')
+        df = pd.read_csv('股票代码.csv',encoding='utf_8')
         return df
     except BaseException:
         raise stkBaseError('get_rst_code error')
@@ -119,7 +119,8 @@ if __name__ == "__main__":
     # df = stock_base.get_stock_code( 'D:\\0_stock_macd\\_月K线金叉.csv' )
     # # print( df )
     set_market_code()
-    get_market_code('all')
+    rst = get_market_code('all')
+    print(rst)
     #
     # xx = get_stock_code('D:\\0_stock_macd\\_月K线金叉.csv')
     # print(xx)

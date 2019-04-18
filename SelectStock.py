@@ -2,16 +2,17 @@
 
 # Form implementation generated from reading ui file 'SelectStock.ui'
 #
-# Created by: PyQt5 UI code generator 5.11.3
+# Created by: PyQt5 UI code generator 5.12.1
 #
 # WARNING! All changes made in this file will be lost!
 
 from PyQt5 import QtCore, QtGui, QtWidgets
 
+
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(645, 542)
+        MainWindow.resize(691, 542)
         font = QtGui.QFont()
         font.setFamily("微软雅黑")
         font.setPointSize(12)
@@ -40,17 +41,17 @@ class Ui_MainWindow(object):
         self.radioButton_11.setGeometry(QtCore.QRect(20, 60, 91, 18))
         self.radioButton_11.setObjectName("radioButton_11")
         self.groupBox_4 = QtWidgets.QGroupBox(self.centralwidget)
-        self.groupBox_4.setGeometry(QtCore.QRect(410, 20, 221, 391))
+        self.groupBox_4.setGeometry(QtCore.QRect(410, 20, 271, 391))
         font = QtGui.QFont()
         font.setFamily("微软雅黑")
         font.setPointSize(12)
         self.groupBox_4.setFont(font)
         self.groupBox_4.setObjectName("groupBox_4")
         self.textEdit = QtWidgets.QTextEdit(self.groupBox_4)
-        self.textEdit.setGeometry(QtCore.QRect(0, 20, 221, 371))
+        self.textEdit.setGeometry(QtCore.QRect(0, 20, 271, 371))
         self.textEdit.setObjectName("textEdit")
         self.groupBox_2 = QtWidgets.QGroupBox(self.centralwidget)
-        self.groupBox_2.setGeometry(QtCore.QRect(10, 210, 381, 61))
+        self.groupBox_2.setGeometry(QtCore.QRect(10, 250, 381, 61))
         font = QtGui.QFont()
         font.setFamily("微软雅黑")
         font.setPointSize(12)
@@ -85,7 +86,7 @@ class Ui_MainWindow(object):
         self.pushButton_2.setObjectName("pushButton_2")
         self.horizontalLayout.addWidget(self.pushButton_2)
         self.groupBox = QtWidgets.QGroupBox(self.centralwidget)
-        self.groupBox.setGeometry(QtCore.QRect(10, 110, 271, 61))
+        self.groupBox.setGeometry(QtCore.QRect(10, 180, 271, 61))
         font = QtGui.QFont()
         font.setFamily("微软雅黑")
         font.setPointSize(12)
@@ -103,7 +104,7 @@ class Ui_MainWindow(object):
         self.radioButton_3.setGeometry(QtCore.QRect(180, 30, 61, 18))
         self.radioButton_3.setObjectName("radioButton_3")
         self.verticalLayoutWidget = QtWidgets.QWidget(self.centralwidget)
-        self.verticalLayoutWidget.setGeometry(QtCore.QRect(20, 460, 611, 31))
+        self.verticalLayoutWidget.setGeometry(QtCore.QRect(50, 460, 611, 31))
         self.verticalLayoutWidget.setObjectName("verticalLayoutWidget")
         self.verticalLayout = QtWidgets.QVBoxLayout(self.verticalLayoutWidget)
         self.verticalLayout.setContentsMargins(0, 0, 0, 0)
@@ -113,9 +114,29 @@ class Ui_MainWindow(object):
         self.label.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
         self.label.setObjectName("label")
         self.verticalLayout.addWidget(self.label)
+        self.horizontalLayoutWidget_2 = QtWidgets.QWidget(self.centralwidget)
+        self.horizontalLayoutWidget_2.setGeometry(QtCore.QRect(10, 80, 381, 41))
+        self.horizontalLayoutWidget_2.setObjectName("horizontalLayoutWidget_2")
+        self.horizontalLayout_2 = QtWidgets.QHBoxLayout(self.horizontalLayoutWidget_2)
+        self.horizontalLayout_2.setContentsMargins(0, 0, 0, 0)
+        self.horizontalLayout_2.setObjectName("horizontalLayout_2")
+        self.pushButton_3 = QtWidgets.QPushButton(self.horizontalLayoutWidget_2)
+        font = QtGui.QFont()
+        font.setFamily("微软雅黑")
+        font.setPointSize(12)
+        self.pushButton_3.setFont(font)
+        self.pushButton_3.setObjectName("pushButton_3")
+        self.horizontalLayout_2.addWidget(self.pushButton_3)
+        self.pushButton_4 = QtWidgets.QPushButton(self.horizontalLayoutWidget_2)
+        font = QtGui.QFont()
+        font.setFamily("微软雅黑")
+        font.setPointSize(12)
+        self.pushButton_4.setFont(font)
+        self.pushButton_4.setObjectName("pushButton_4")
+        self.horizontalLayout_2.addWidget(self.pushButton_4)
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(MainWindow)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 645, 23))
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 691, 23))
         self.menubar.setObjectName("menubar")
         MainWindow.setMenuBar(self.menubar)
         self.statusbar = QtWidgets.QStatusBar(MainWindow)
@@ -137,12 +158,16 @@ class Ui_MainWindow(object):
         self.groupBox_2.setTitle(_translate("MainWindow", "级别"))
         self.radioButton_6.setText(_translate("MainWindow", "60 分钟级别"))
         self.radioButton_7.setText(_translate("MainWindow", "15 分钟级别"))
-        self.pushButton.setText(_translate("MainWindow", "基础金叉初始化"))
-        self.pushButton_2.setText(_translate("MainWindow", "开始选股"))
+        self.pushButton.setText(_translate("MainWindow", "金叉初始化(月周日)"))
+        self.pushButton_2.setText(_translate("MainWindow", "金叉初始化(日)"))
         self.groupBox.setTitle(_translate("MainWindow", "基础金叉条件"))
         self.radioButton.setText(_translate("MainWindow", "月线"))
         self.radioButton_2.setText(_translate("MainWindow", "周线"))
         self.radioButton_3.setText(_translate("MainWindow", "日线"))
+        self.pushButton_3.setText(_translate("MainWindow", "金叉初始化(周日)"))
+        self.pushButton_4.setText(_translate("MainWindow", "开始选股"))
+
+
 
 
 if __name__ == "__main__":
@@ -153,4 +178,3 @@ if __name__ == "__main__":
     ui.setupUi(MainWindow)
     MainWindow.show()
     sys.exit(app.exec_())
-
