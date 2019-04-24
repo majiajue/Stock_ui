@@ -145,27 +145,40 @@
     <widget class="QRadioButton" name="radioButton_6">
      <property name="geometry">
       <rect>
-       <x>20</x>
+       <x>140</x>
        <y>30</y>
-       <width>121</width>
+       <width>111</width>
        <height>18</height>
       </rect>
      </property>
      <property name="text">
-      <string>60 分钟级别</string>
+      <string>60 分钟</string>
      </property>
     </widget>
     <widget class="QRadioButton" name="radioButton_7">
      <property name="geometry">
       <rect>
-       <x>180</x>
+       <x>270</x>
        <y>30</y>
-       <width>131</width>
+       <width>111</width>
        <height>18</height>
       </rect>
      </property>
      <property name="text">
-      <string>15 分钟级别</string>
+      <string>15 分钟</string>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="radioButton_12">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>30</y>
+       <width>71</width>
+       <height>18</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>日线</string>
      </property>
     </widget>
    </widget>
@@ -212,7 +225,7 @@
      <rect>
       <x>10</x>
       <y>180</y>
-      <width>271</width>
+      <width>381</width>
       <height>61</height>
      </rect>
     </property>
@@ -243,7 +256,7 @@
     <widget class="QRadioButton" name="radioButton_2">
      <property name="geometry">
       <rect>
-       <x>100</x>
+       <x>140</x>
        <y>30</y>
        <width>61</width>
        <height>18</height>
@@ -256,7 +269,7 @@
     <widget class="QRadioButton" name="radioButton_3">
      <property name="geometry">
       <rect>
-       <x>180</x>
+       <x>270</x>
        <y>30</y>
        <width>61</width>
        <height>18</height>

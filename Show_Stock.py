@@ -36,7 +36,6 @@ class MACD_Calc(QThread):
         self.wait()
 
     def run(self):
-        print(self.macd_m)
         if self.macd_m is not None:
             self.macd_m.save_golden(self.para_m)
             self.macd_m.disconnect()
@@ -136,6 +135,10 @@ class Slt_Stock(QtWidgets.QMainWindow, sl.Ui_MainWindow):
         if self.radioButton_7.isChecked():
             # print('radioButton_7 15 分钟级别')
             macd_jb = mb.MACD_INDEX('15')
+            macd_jb.signal.send.connect(self.macd_progress)
+        if self.radioButton_12.isChecked():
+            # print('radioButton_12 日线级别')
+            macd_jb = mb.MACD_INDEX('d')
             macd_jb.signal.send.connect(self.macd_progress)
 
         if self.radioButton_8.isChecked():
